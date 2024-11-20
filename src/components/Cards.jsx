@@ -34,14 +34,16 @@ function Cards({ item, currNft, player, setPlayer, setCurrNft, account, idx, pro
       const tx = await marketplacecontract.watchVideo(idx, {
         value: (price) // Assuming you have apartment price
       });      // Send the transaction (assuming signer has sufficient funds)
-      const receipt = await tx.wait();
 
+      toast.info("Your transaction is being processed", {
+        position: "top-center"
+      })
       await tx.wait();
       toast.success("Transaction successful!", { position: "top-center" })
-      console.log("Transaction successful:", receipt);
+      // console.log("Transaction successful:", receipt);
       setPlayer(true);
       setCurrNft(item)
-      console.log(receipt.transactionHash);
+      // console.log(receipt.transactionHash);
 
     } catch (error) {
       console.log(error);
