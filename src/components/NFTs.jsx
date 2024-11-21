@@ -39,7 +39,7 @@ function NFTs({ marketplace, setMarketplace, account, setNFTitem }) {
 
     // console.log("items: ", items);
     // console.log(itemCount);
-    for (let i = 0; i < itemCount; i++) {
+    for (let i = 0; i < itemCount; i++) {  
       const item = items[i]
       // console.log("item: ", item);
       // console.log(item);
